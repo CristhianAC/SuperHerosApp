@@ -47,7 +47,7 @@ fun HeroListPreview() {
         }
     }
 }
-@Preview
+
 @Composable
 fun HeroesList(modifier: Modifier = Modifier, contentPadding: PaddingValues = PaddingValues(0.dp)) {
     LazyColumn (modifier=modifier.padding(
@@ -74,9 +74,12 @@ fun HeroCard(modifier: Modifier = Modifier, item:Hero){
                 .size(72.dp)
                 .clip(RoundedCornerShape(8.dp))
             ){
-            Image(painter = painterResource(id = item.imageRes), contentDescription = stringResource(
-                id = item.nameRes
-            ), alignment = Alignment.TopCenter,
+            Image(
+                painter = painterResource(id = item.imageRes),
+                contentDescription = stringResource(
+                    id = item.nameRes
+                ),
+                alignment = Alignment.TopCenter,
                 contentScale = ContentScale.FillWidth
             )
             }
